@@ -4,6 +4,7 @@ use websocket with nodejs http server to make a broadcast chat
 ## Features
 - select username
 - message broadcast
+- static files serving
 
 ## Setup
 ```

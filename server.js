@@ -126,6 +126,10 @@ wsServer.on('request', function(request) {
 
 
 
+/**
+ * serve static frontend files
+ */
+
 const staticDir = path.join(process.cwd(),'view')
 const mimeTypes = {
     txt: 'text/plain',
@@ -145,6 +149,7 @@ function sendError(errorCode,errorMessage,res){
     res.setHeader('Content-Type','text/plain')
     res.end(errorMessage)
 }
+
 
 server.on('request',(req,res)=>{
     if(req.method!="GET") return sendError(501,'Method Not Implemented',res)
